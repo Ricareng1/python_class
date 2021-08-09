@@ -61,8 +61,18 @@ def run_pipeline():
 # --------------------------------------------------
 def main():
     """Make your noise here"""
-    run_pipeline()
+    # run_pipeline()
 
+    # Generators: (expr(item) for item in iterable)
+    # Task: Calculate the sum of the first 1 million square numbers
+
+    # Generator (Faster)
+    m_sq = (x*x for x in range(1, 1000000))
+    print((type(m_sq)))
+
+    # Comprehension
+    l_sq = [x*x for x in range(1, 1000001)]
+    print(f'The sum of the first 1000 square numbers is: {sum(l_sq)}')
 
 # --------------------------------------------------
 if __name__ == '__main__':
